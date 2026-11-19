@@ -228,7 +228,7 @@ body {
     padding: 0px 20px;
     bottom: -18px;
     border: 3px solid var(--color-black);
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script', cursive;    
     left: 0;
     width: 100%;
     display: flex;
@@ -447,6 +447,20 @@ body {
     position: absolute;
     top: 150px;
     right: 235px;
+    transform: scale(0);
+    animation: scaleCricle 3s var(--t) forwards ease-in-out;
+}
+.decorate_snoopy--two{
+    position: absolute;
+    top: 75px;
+    left: 160px;
+    transform: scale(0);
+    animation: scaleCricle 3s var(--t) forwards ease-in-out;
+}
+.decorate_snoopy{
+    position: absolute;
+    bottom: 85px;
+    right: 430px;
     transform: scale(0);
     animation: scaleCricle 3s var(--t) forwards ease-in-out;
 }
@@ -918,7 +932,7 @@ body {
     position: relative;
     background-color: #FF7882;
     transition: all 1s;
-    overflow-y: auto;
+    overflow-y: auto; 
     font-family: "Inter", serif;
     color: #fff;
     padding: 10px;
@@ -1027,7 +1041,8 @@ body {
     cursor: pointer;
     color: white;
     z-index: 10000000000000000;
-}.card2-content::-webkit-scrollbar {
+}
+.card2-content::-webkit-scrollbar {
   width: 5px;
 }
 .card2-content::-webkit-scrollbar-thumb {
