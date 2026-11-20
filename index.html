@@ -19,6 +19,24 @@
 </head>
 
 <body>
+     <!-- LAGU BACKSOUND -->
+<audio id="bg-music" loop>
+  <source src="out of my league.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LAYAR PEMBUKA PIRINGAN HITAM -->
+<div id="vinyl-overlay">
+  <h1 class="play-title">Click Play!</h1>
+  <div class="vinyl-wrapper" id="play-btn">
+    <div class="vinyl-disc">
+      <div class="vinyl-groove"></div>
+      <div class="vinyl-center">
+        <div class="play-triangle"></div>
+      </div>
+    </div>
+    <div class="tonearm"></div>
+  </div>
+</div>
     <div id="wrapper">
         <div class="flag__birthday">
             <img src="./images/1.png" alt="" width="350" class="flag__left">
@@ -163,9 +181,33 @@
             </div>
         </div>
     </div>
+ <script>
+  // Tahan semua animasi di dalam #wrapper sebelum tombol play diklik
+  document.body.classList.add('pause-animations');
 
+  const playBtn = document.getElementById('play-btn');
+  const overlay = document.getElementById('vinyl-overlay');
+  const music = document.getElementById('bg-music');
+
+  playBtn.addEventListener('click', () => {
+    // 1. Putar lagu
+    music.play();
+    
+    // 2. Hilangkan layar pink perlahan
+    overlay.classList.add('fade-out');
+    
+    // 3. Jalankan semua animasi Happy Birthday (bendera, tulisan, topi, foto)
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      document.body.classList.remove('pause-animations');
+      mulaiAnimasiTeks();
+
+    }, 500);
+  });
+</script>
 </body>
 <script>
+    function mulaiAnimasiTeks() {
     let datetxt = "04 December";
     let datatxtletter = "Saffaa. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.🎉";
     let titleLetter = "To you";
@@ -265,6 +307,7 @@
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+    }
 </script>
 
 </html>
