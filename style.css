@@ -464,6 +464,27 @@ body {
     transform: scale(0);
     animation: scaleCricle 3s var(--t) forwards ease-in-out;
 }
+.snoopy_kamera{
+    position: absolute;
+    top: 220px;
+    left: 670px;
+    transform: scale(0);
+    animation: scaleCricle 3s var(--t) forwards ease-in-out;
+}
+.polaroid_snoopy{
+    position: absolute;
+    bottom: 100px;
+    right: 1px;
+    transform: scale(0);
+    animation: scaleCricle 3s var(--t) forwards ease-in-out;
+}
+.foto_love{
+    position: absolute;
+    bottom: 30px;
+    left: 190px;
+    transform: scale(0);
+    animation: scaleCricle 3s var(--t) forwards ease-in-out;
+}
 .smiley__icon{
     position: absolute;
     bottom: 180px;
@@ -950,8 +971,8 @@ body {
     text-shadow: 0 0 8px #FF7882;
 }
 .boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 3s forwards;
-    animation-delay: 2s;
+    animation: texth3 1.5s forwards;
+    animation-delay: 0.5s;
     transition: 1s;
 }
 @keyframes texth3{
@@ -974,8 +995,8 @@ body {
     opacity: 0;
 }
 .boxMail .boxMail-container .card2:hover h2{
-    animation: texth2 2s forwards;
-    animation-delay: 4s;
+    animation: texth2 1.5s forwards;
+    animation-delay: 1.2s;
     transition: 1s;
 }
 @keyframes texth2{
@@ -995,8 +1016,8 @@ body {
 }
 .boxMail .boxMail-container .card2 .card2-content:hover .imageCute2{
     animation: cute3 1s linear infinite,
-                cute4 3s 2s forwards;
-    animation-delay: 2s;
+                cute4 2s 0.5s forwards;
+    animation-delay: 0.5s;
     transition: 1s;
 }
 @keyframes cute3{
